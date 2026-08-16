@@ -11,9 +11,9 @@
     "require": {
         "php": "^8.3",
         "laravel/framework": "^13.8",
-        "mnaji554/laravel-easyblade": "dev-master",
+        "mnaji554/laravel-easyblade": "^2.0",
         "livewire/livewire": "^3.0",
-        "mnaji554/dynamic-acl": "dev-master"
+        "mnaji554/dynamic-acl": "^2.0"
     },
     "require-dev": {
         "orchestra/testbench": "^10.0"

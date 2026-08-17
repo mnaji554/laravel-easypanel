@@ -96,7 +96,7 @@ class Create extends Component
         }
 
 
-        $this->emit('crudUpdated');
+        $this->dispatch('crudUpdated');
         $this->reset();
     }
 

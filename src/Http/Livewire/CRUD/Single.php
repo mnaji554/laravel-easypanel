@@ -25,7 +25,7 @@ class Single extends Component
 
         $this->crud->delete();
         $this->dispatch('show-message', ['type' => 'error', 'message' => __('DeletedMessage', ['name' => __('CRUD') ] )]);
-        $this->emit('crudUpdated');
+        $this->dispatch('crudUpdated');
     }
 
     public function build()
@@ -40,7 +40,7 @@ class Single extends Component
         ]);
 
         $this->dispatch('show-message', ['type' => 'success', 'message' => __('CRUD Created successfully') ] );
-        $this->emit('crudUpdated');
+        $this->dispatch('crudUpdated');
     }
 
     public function inactive()
@@ -50,7 +50,7 @@ class Single extends Component
         ]);
 
         $this->dispatch('show-message', ['type' => 'success', 'message' => __('CRUD was inactivated') ] );
-        $this->emit('crudUpdated');
+        $this->dispatch('crudUpdated');
     }
 
     public function active()
@@ -60,7 +60,7 @@ class Single extends Component
         ]);
 
         $this->dispatch('show-message', ['type' => 'success', 'message' => __('CRUD was activated') ] );
-        $this->emit('crudUpdated');
+        $this->dispatch('crudUpdated');
     }
 
     public function render()

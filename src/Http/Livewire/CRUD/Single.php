@@ -24,8 +24,8 @@ class Single extends Component
         ]);
 
         $this->crud->delete();
-        $this->dispatchBrowserEvent('show-message', ['type' => 'error', 'message' => __('DeletedMessage', ['name' => __('CRUD') ] )]);
-        $this->emit('crudUpdated');
+        $this->dispatch('show-message', ['type' => 'error', 'message' => __('DeletedMessage', ['name' => __('CRUD') ] )]);
+        $this->dispatch('crudUpdated');
     }
 
     public function build()
@@ -39,8 +39,8 @@ class Single extends Component
             'built' => true
         ]);
 
-        $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('CRUD Created successfully') ] );
-        $this->emit('crudUpdated');
+        $this->dispatch('show-message', ['type' => 'success', 'message' => __('CRUD Created successfully') ] );
+        $this->dispatch('crudUpdated');
     }
 
     public function inactive()
@@ -49,8 +49,8 @@ class Single extends Component
             'active' => false
         ]);
 
-        $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('CRUD was inactivated') ] );
-        $this->emit('crudUpdated');
+        $this->dispatch('show-message', ['type' => 'success', 'message' => __('CRUD was inactivated') ] );
+        $this->dispatch('crudUpdated');
     }
 
     public function active()
@@ -59,8 +59,8 @@ class Single extends Component
             'active' => true
         ]);
 
-        $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('CRUD was activated') ] );
-        $this->emit('crudUpdated');
+        $this->dispatch('show-message', ['type' => 'success', 'message' => __('CRUD was activated') ] );
+        $this->dispatch('crudUpdated');
     }
 
     public function render()

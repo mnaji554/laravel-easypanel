@@ -90,13 +90,13 @@ class Create extends Component
                 '--force' => true
             ]);
 
-            $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('CreatedMessage', ['name' => __('CRUD') ])]);
+            $this->dispatch('show-message', ['type' => 'success', 'message' => __('CreatedMessage', ['name' => __('CRUD') ])]);
         } catch(\Exception $exception){
-            $this->dispatchBrowserEvent('show-message', ['type' => 'error', 'message' => __('UnknownError') ]);
+            $this->dispatch('show-message', ['type' => 'error', 'message' => __('UnknownError') ]);
         }
 
 
-        $this->emit('crudUpdated');
+        $this->dispatch('crudUpdated');
         $this->reset();
     }
 

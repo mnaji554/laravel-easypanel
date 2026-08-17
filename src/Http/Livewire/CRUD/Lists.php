@@ -30,7 +30,7 @@ class Lists extends Component
             'built' => true
         ]);
 
-        $this->dispatchBrowserEvent('show-message', [
+        $this->dispatch('show-message', [
             'type' => 'success',
             'message' => __('CRUD Created successfully')
         ]);
